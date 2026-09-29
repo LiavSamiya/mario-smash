@@ -1,0 +1,24 @@
+{
+  "sheet": "bowser - full spritesheet.jpg",
+  // Bowser faces left on this sheet
+  "flip": true,
+  "reference": "Stand",
+  "animations": {
+    "Stand":      { "frames": [114,115,116,117,118,119], "frameTicks": 7, "loop": true },
+    "Run":        { "frames": [143,144,145,146,147,148], "frameTicks": 5, "loop": true },
+    "Turn":       { "frames": [114], "frameTicks": 4 },
+    "JumpSquat":  { "frames": [203], "frameTicks": 4 },
+    "Jump":       { "frames": [197,198,199,200], "frameTicks": 5 },
+    "Fall":       { "frames": [201,202], "frameTicks": 8, "loop": true },
+    "Landing":    { "frames": [203,204], "frameTicks": 4 },
+    "Jab":        { "frames": [223,224,225,226,227,228,229], "frameTicks": 3 },
+    "MultiJab":   { "frames": [244,[245,246],[247,248],249,250,251], "frameTicks": 4 },
+    "UpTilt":     { "frames": [327,349,336,339,342,343,350], "frameTicks": 4 },
+    "UpSmash":    { "frames": [344,345,346,324,325,347,348], "frameTicks": 5 },
+    "DownSmash":  { "frames": [376,377,378,388,389,390,391,379,380,381], "frameTicks": 3 },
+    "NeutralAir": { "frames": [416,417,418,419,420,421,422,423,424,425], "frameTicks": 3 },
+    "UpAir":      { "frames": [515,516,517,518,519,520,521,522,523,524], "frameTicks": 3 },
+    "Hang":       { "frames": [120,121], "frameTicks": 10, "loop": true, "align": "hang" },
+    "Shield":     { "frames": [124], "frameTicks": 6, "loop": true }
+  }
+}

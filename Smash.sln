@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{58C8BE5E-FF73-459C-83F9-423704B48961}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Smash", "src\Smash\Smash.csproj", "{AD5ED381-6D46-4208-830D-07A75CC5BC3E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{36A6CBAB-F12E-4E8D-8A6D-AA436ABE6479}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Smash.Tests", "tests\Smash.Tests\Smash.Tests.csproj", "{32BCA3D2-BD64-459B-ACB4-415ACB8C13B2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tools", "tools", "{65C6C587-0656-4CE1-A3FE-2818E91A1F64}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpriteCutter", "tools\SpriteCutter\SpriteCutter.csproj", "{F6C001AC-B5EC-45B5-8EA4-E0DE78856001}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GifMaker", "tools\GifMaker\GifMaker.csproj", "{0D940008-967D-44F8-8BB2-187A65E2EC46}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AD5ED381-6D46-4208-830D-07A75CC5BC3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD5ED381-6D46-4208-830D-07A75CC5BC3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD5ED381-6D46-4208-830D-07A75CC5BC3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD5ED381-6D46-4208-830D-07A75CC5BC3E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32BCA3D2-BD64-459B-ACB4-415ACB8C13B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32BCA3D2-BD64-459B-ACB4-415ACB8C13B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32BCA3D2-BD64-459B-ACB4-415ACB8C13B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32BCA3D2-BD64-459B-ACB4-415ACB8C13B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6C001AC-B5EC-45B5-8EA4-E0DE78856001}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6C001AC-B5EC-45B5-8EA4-E0DE78856001}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6C001AC-B5EC-45B5-8EA4-E0DE78856001}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6C001AC-B5EC-45B5-8EA4-E0DE78856001}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D940008-967D-44F8-8BB2-187A65E2EC46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D940008-967D-44F8-8BB2-187A65E2EC46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D940008-967D-44F8-8BB2-187A65E2EC46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D940008-967D-44F8-8BB2-187A65E2EC46}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AD5ED381-6D46-4208-830D-07A75CC5BC3E} = {58C8BE5E-FF73-459C-83F9-423704B48961}
+		{32BCA3D2-BD64-459B-ACB4-415ACB8C13B2} = {36A6CBAB-F12E-4E8D-8A6D-AA436ABE6479}
+		{F6C001AC-B5EC-45B5-8EA4-E0DE78856001} = {65C6C587-0656-4CE1-A3FE-2818E91A1F64}
+		{0D940008-967D-44F8-8BB2-187A65E2EC46} = {65C6C587-0656-4CE1-A3FE-2818E91A1F64}
+	EndGlobalSection
+EndGlobal

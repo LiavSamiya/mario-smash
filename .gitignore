@@ -1,10 +1,13 @@
-# Visual Studio
+# Visual Studio / Rider
 .vs/
+.idea/
 *.suo
 *.user
 
 # Build output
 bin/
 obj/
-Content/bin/
-Content/obj/
+TestResults/
+
+# output of "Smash --screenshots" when run without a folder
+screenshots/

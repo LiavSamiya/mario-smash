@@ -1,0 +1,38 @@
+{
+  // heavy and slow, but hits hard
+  "name": "Bowser",
+  "order": 1,
+  "scale": 1.8,
+  "weight": 140,
+  "runSpeed": 4.2,
+  "groundAcceleration": 0.7,
+  "groundFriction": 0.8,
+  "airSpeed": 3.6,
+  "airAcceleration": 0.35,
+  "airFriction": 0.08,
+  "gravity": 0.6,
+  "maxFallSpeed": 10,
+  "fastFallSpeed": 15,
+  "jumpVelocity": 12.2,
+  "shortHopVelocity": 8.2,
+  "doubleJumpVelocity": 11,
+  "jumpSquatTicks": 4,
+  "landingTicks": 7,
+  "moves": {
+    "Jab":        { "animation": "Jab", "followUp": "MultiJab", "hits": [
+      { "frames": [2, 3], "damage": 5, "angle": 361, "baseKnockback": 25, "knockbackGrowth": 50, "hitbox": { "direction": "Forward", "radius": 26 } } ] },
+    "MultiJab":   { "animation": "MultiJab", "hits": [
+      { "frames": [1, 2], "damage": 9, "angle": 40, "baseKnockback": 45, "knockbackGrowth": 95, "hitbox": { "direction": "Forward", "radius": 30 } } ] },
+    "UpTilt":     { "animation": "UpTilt", "hits": [
+      { "frames": [1, 1], "damage": 6, "angle": 80, "baseKnockback": 38, "knockbackGrowth": 60, "hitbox": { "direction": "Forward", "radius": 30 } },
+      { "frames": [2, 3], "damage": 10, "angle": 85, "baseKnockback": 35, "knockbackGrowth": 100, "hitbox": { "direction": "UpForward", "radius": 30 } } ] },
+    "UpSmash":    { "animation": "UpSmash", "hits": [
+      { "frames": [2, 4], "damage": 18, "angle": 85, "baseKnockback": 35, "knockbackGrowth": 100, "hitbox": { "direction": "Around", "radius": 30 } } ] },
+    "DownSmash":  { "animation": "DownSmash", "hits": [
+      { "frames": [2, 7], "damage": 15, "angle": 30, "baseKnockback": 32, "knockbackGrowth": 100, "hitbox": { "direction": "Sides", "radius": 36 } } ] },
+    "NeutralAir": { "animation": "NeutralAir", "aerial": true, "landingLag": 10, "hits": [
+      { "frames": [1, 6], "damage": 10, "angle": 361, "baseKnockback": 20, "knockbackGrowth": 100, "hitbox": { "direction": "Around", "radius": 28 } } ] },
+    "UpAir":      { "animation": "UpAir", "aerial": true, "landingLag": 10, "hits": [
+      { "frames": [4, 6], "damage": 12, "angle": 85, "baseKnockback": 25, "knockbackGrowth": 110, "hitbox": { "direction": "Up", "radius": 30 } } ] }
+  }
+}

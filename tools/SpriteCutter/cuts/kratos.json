@@ -1,0 +1,23 @@
+{
+  "sheet": "kratos - full spritesheet (by sneckker).jpg",
+  "flip": false,
+  "reference": "Stand",
+  "animations": {
+    "Stand":      { "frames": [7,8,9,10,11], "frameTicks": 7, "loop": true },
+    "Run":        { "frames": [30,31,32,33,34,35,36,37,38], "frameTicks": 4, "loop": true },
+    "Turn":       { "frames": [7], "frameTicks": 4 },
+    "JumpSquat":  { "frames": [40], "frameTicks": 3 },
+    "Jump":       { "frames": [41,42,43], "frameTicks": 5 },
+    "Fall":       { "frames": [44,45], "frameTicks": 8, "loop": true },
+    "Landing":    { "frames": [40], "frameTicks": 5 },
+    "Jab":        { "frames": [49,50,51,52,53], "frameTicks": 3 },
+    "MultiJab":   { "frames": [54,55,56,57,[62,63],64,65,66], "frameTicks": 3 },
+    "UpTilt":     { "frames": [168,169,170,171,172], "frameTicks": 4 },
+    "UpSmash":    { "frames": [151,152,153,154,[155,156],157,158,[159,160],[161,164],162,163], "frameTicks": 3 },
+    "DownSmash":  { "frames": [184,185,186,187,188], "frameTicks": 5 },
+    "NeutralAir": { "frames": [70,71,72], "frameTicks": 5 },
+    "UpAir":      { "frames": [175,176,177,178,179,180,181], "frameTicks": 3 },
+    "Hang":       { "frames": [342], "frameTicks": 8, "loop": true, "align": "hang" },
+    "Shield":     { "frames": [350], "frameTicks": 6, "loop": true }
+  }
+}

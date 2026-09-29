@@ -1,0 +1,13 @@
+{
+  "name": "Space Platform",
+  "sheet": "Stage",
+  "background": "Background",
+  "backgroundScale": 2,
+  "scale": 2,
+  "frameTicks": 15,
+  // world position: the background is 2000 x 1080 at scale 2
+  "centerX": 1000,
+  "deckTopY": 560,
+  "surfaceDepth": 9,
+  "blastMargin": 80
+}

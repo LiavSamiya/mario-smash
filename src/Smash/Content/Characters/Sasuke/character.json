@@ -1,0 +1,38 @@
+{
+  // light and fast, jumps high
+  "name": "Sasuke",
+  "order": 3,
+  "scale": 3.0,
+  "weight": 94,
+  "runSpeed": 7.4,
+  "groundAcceleration": 1.4,
+  "groundFriction": 0.7,
+  "airSpeed": 5.4,
+  "airAcceleration": 0.62,
+  "airFriction": 0.08,
+  "gravity": 0.52,
+  "maxFallSpeed": 9.2,
+  "fastFallSpeed": 13.5,
+  "jumpVelocity": 13.5,
+  "shortHopVelocity": 9,
+  "doubleJumpVelocity": 12.5,
+  "jumpSquatTicks": 3,
+  "landingTicks": 4,
+  "moves": {
+    "Jab":        { "animation": "Jab", "followUp": "MultiJab", "hits": [
+      { "frames": [1, 2], "damage": 3, "angle": 361, "baseKnockback": 20, "knockbackGrowth": 40, "hitbox": { "direction": "Forward", "radius": 20 } } ] },
+    "MultiJab":   { "animation": "MultiJab", "hits": [
+      { "frames": [1, 2], "damage": 3, "angle": 361, "baseKnockback": 15, "knockbackGrowth": 30, "hitbox": { "direction": "Forward", "radius": 22 } },
+      { "frames": [5, 7], "damage": 7, "angle": 40, "baseKnockback": 45, "knockbackGrowth": 90, "hitbox": { "direction": "Forward", "radius": 26 } } ] },
+    "UpTilt":     { "animation": "UpTilt", "hits": [
+      { "frames": [1, 2], "damage": 7, "angle": 85, "baseKnockback": 30, "knockbackGrowth": 110, "hitbox": { "direction": "UpForward", "radius": 22 } } ] },
+    "UpSmash":    { "animation": "UpSmash", "hits": [
+      { "frames": [3, 6], "damage": 14, "angle": 88, "baseKnockback": 30, "knockbackGrowth": 98, "hitbox": { "direction": "Around", "radius": 24 } } ] },
+    "DownSmash":  { "animation": "DownSmash", "hits": [
+      { "frames": [2, 4], "damage": 12, "angle": 28, "baseKnockback": 30, "knockbackGrowth": 100, "hitbox": { "direction": "Sides", "radius": 24 } } ] },
+    "NeutralAir": { "animation": "NeutralAir", "aerial": true, "landingLag": 6, "hits": [
+      { "frames": [0, 2], "damage": 8, "angle": 361, "baseKnockback": 12, "knockbackGrowth": 100, "hitbox": { "direction": "Forward", "radius": 22 } } ] },
+    "UpAir":      { "animation": "UpAir", "aerial": true, "landingLag": 6, "hits": [
+      { "frames": [1, 1], "damage": 9, "angle": 85, "baseKnockback": 22, "knockbackGrowth": 118, "hitbox": { "direction": "Around", "radius": 24 } } ] }
+  }
+}

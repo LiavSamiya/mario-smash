@@ -1,0 +1,39 @@
+{
+  // long reach with the axe and the chained blades
+  "name": "Kratos",
+  "order": 2,
+  "scale": 2.2,
+  "weight": 110,
+  "runSpeed": 5.0,
+  "groundAcceleration": 0.85,
+  "groundFriction": 0.7,
+  "airSpeed": 4.0,
+  "airAcceleration": 0.42,
+  "airFriction": 0.08,
+  "gravity": 0.58,
+  "maxFallSpeed": 9.8,
+  "fastFallSpeed": 14.5,
+  "jumpVelocity": 12.4,
+  "shortHopVelocity": 8.4,
+  "doubleJumpVelocity": 11.3,
+  "jumpSquatTicks": 3,
+  "landingTicks": 6,
+  "moves": {
+    "Jab":        { "animation": "Jab", "followUp": "MultiJab", "hits": [
+      { "frames": [1, 2], "damage": 5, "angle": 361, "baseKnockback": 22, "knockbackGrowth": 45, "hitbox": { "direction": "Forward", "radius": 22 } } ] },
+    "MultiJab":   { "animation": "MultiJab", "hits": [
+      { "frames": [1, 2], "damage": 4, "angle": 361, "baseKnockback": 18, "knockbackGrowth": 35, "hitbox": { "direction": "Forward", "radius": 24 } },
+      { "frames": [5, 6], "damage": 8, "angle": 40, "baseKnockback": 45, "knockbackGrowth": 92, "hitbox": { "direction": "Forward", "radius": 26 } } ] },
+    "UpTilt":     { "animation": "UpTilt", "hits": [
+      { "frames": [1, 1], "damage": 5, "angle": 80, "baseKnockback": 35, "knockbackGrowth": 60, "hitbox": { "direction": "Forward", "radius": 26 } },
+      { "frames": [2, 3], "damage": 8, "angle": 85, "baseKnockback": 32, "knockbackGrowth": 105, "hitbox": { "direction": "UpForward", "radius": 24 } } ] },
+    "UpSmash":    { "animation": "UpSmash", "hits": [
+      { "frames": [4, 8], "damage": 16, "angle": 88, "baseKnockback": 32, "knockbackGrowth": 98, "hitbox": { "direction": "Around", "radius": 28 } } ] },
+    "DownSmash":  { "animation": "DownSmash", "hits": [
+      { "frames": [1, 3], "damage": 14, "angle": 30, "baseKnockback": 32, "knockbackGrowth": 100, "hitbox": { "direction": "Sides", "radius": 26 } } ] },
+    "NeutralAir": { "animation": "NeutralAir", "aerial": true, "landingLag": 8, "hits": [
+      { "frames": [1, 2], "damage": 9, "angle": 361, "baseKnockback": 15, "knockbackGrowth": 100, "hitbox": { "direction": "Forward", "radius": 24 } } ] },
+    "UpAir":      { "animation": "UpAir", "aerial": true, "landingLag": 8, "hits": [
+      { "frames": [3, 5], "damage": 10, "angle": 85, "baseKnockback": 22, "knockbackGrowth": 115, "hitbox": { "direction": "Up", "radius": 24 } } ] }
+  }
+}

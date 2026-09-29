@@ -1,0 +1,24 @@
+{
+  // numbers are the sprite numbers printed by "SpriteCutter detect" on this sheet (Mario SSBB style by GregarLink10)
+  "sheet": "mario - full spritesheet.jpg",
+  "flip": false,
+  "reference": "Stand",
+  "animations": {
+    "Stand":      { "frames": [1,2,3,4,5,6], "frameTicks": 7, "loop": true },
+    "Run":        { "frames": [18,19,20,21,22,23,24,25], "frameTicks": 4, "loop": true },
+    "Turn":       { "frames": [26], "frameTicks": 4 },
+    "JumpSquat":  { "frames": [11], "frameTicks": 3 },
+    "Jump":       { "frames": [8,9,10], "frameTicks": 5 },
+    "Fall":       { "frames": [10], "frameTicks": 8, "loop": true },
+    "Landing":    { "frames": [12,13], "frameTicks": 3 },
+    "Jab":        { "frames": [40,41,42], "frameTicks": 3 },
+    "MultiJab":   { "frames": [43,44,45,46,47,48,49,50,51,52,53,54,55,56], "frameTicks": 3 },
+    "UpTilt":     { "frames": [76,77,78,79,80,81], "frameTicks": 4 },
+    "UpSmash":    { "frames": [67,68,69,70,71,72,73], "frameTicks": 5 },
+    "DownSmash":  { "frames": [97,98,99,100,101,102,103,104,105], "frameTicks": 4 },
+    "NeutralAir": { "frames": [60,61,62,63], "frameTicks": 5 },
+    "UpAir":      { "frames": [85,[86,87],88,89,90,91,92,93], "frameTicks": 3 },
+    "Hang":       { "frames": [14], "frameTicks": 8, "loop": true, "align": "hang" },
+    "Shield":     { "frames": [293], "frameTicks": 6, "loop": true }
+  }
+}

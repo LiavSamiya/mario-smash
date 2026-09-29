@@ -1,0 +1,23 @@
+{
+  "sheet": "sasuke - full spritesheet.jpg",
+  "flip": false,
+  "reference": "Stand",
+  "animations": {
+    "Stand":      { "frames": [4,5,6,7,8,9], "frameTicks": 6, "loop": true },
+    "Run":        { "frames": [22,23,24,25,26,27], "frameTicks": 4, "loop": true },
+    "Turn":       { "frames": [4], "frameTicks": 4 },
+    "JumpSquat":  { "frames": [39], "frameTicks": 3 },
+    "Jump":       { "frames": [41,42,43], "frameTicks": 5 },
+    "Fall":       { "frames": [44], "frameTicks": 8, "loop": true },
+    "Landing":    { "frames": [39,38], "frameTicks": 3 },
+    "Jab":        { "frames": [80,81,82,83], "frameTicks": 3 },
+    "MultiJab":   { "frames": [84,85,86,87,88,89,90,91,92], "frameTicks": 3 },
+    "UpTilt":     { "frames": [120,121,122,123,124], "frameTicks": 4 },
+    "UpSmash":    { "frames": [165,166,167,163,168,164,169,170,171,172], "frameTicks": 3 },
+    "DownSmash":  { "frames": [138,139,140,141,142,143], "frameTicks": 4 },
+    "NeutralAir": { "frames": [125,126,127,128], "frameTicks": 4 },
+    "UpAir":      { "frames": [129,130,131], "frameTicks": 5 },
+    "Hang":       { "frames": [45], "frameTicks": 8, "loop": true, "align": "hang" },
+    "Shield":     { "frames": [67], "frameTicks": 6, "loop": true }
+  }
+}
