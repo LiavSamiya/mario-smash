@@ -1,0 +1,10 @@
+# Visual Studio
+.vs/
+*.suo
+*.user
+
+# Build output
+bin/
+obj/
+Content/bin/
+Content/obj/
