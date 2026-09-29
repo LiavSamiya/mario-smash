@@ -2,7 +2,7 @@
 
 > ⚠️ **Unofficial fan-made project.** Mario Smash is a non-commercial fan game inspired by Nintendo's **Super Smash Bros.** series. It is **not** affiliated with, endorsed by, sponsored by, or approved by Nintendo. *Mario*, *Super Smash Bros.*, and all related characters, names, and artwork are trademarks and copyrights of **Nintendo** (and HAL Laboratory / Sora Ltd. where applicable). All Nintendo-owned assets in this repository belong to their respective owners and are used for educational, non-commercial purposes only. No copyright infringement is intended. See [Legal notice](#legal-notice).
 
-A 2D platform fighter written in **C#** with **MonoGame**, built from scratch as a high-school final project (June 2019). Two Marios face off on a floating platform in space — the last one standing wins.
+A 2D platform fighter written in **C#** with **MonoGame**, built from scratch as a high-school final project (June 2019). Two Marios face off on a floating platform in space, the last one standing wins.
 
 ![Two Marios at the start of a match](docs/images/gameplay-start.png)
 
