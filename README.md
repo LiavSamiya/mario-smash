@@ -4,7 +4,7 @@
 
 > ⚠️ **Unofficial fan-made project.** Mario Smash is a non-commercial fan game inspired by Nintendo's **Super Smash Bros.** series. It is **not** affiliated with, endorsed by, sponsored by, or approved by Nintendo or by any other rights holder. *Mario*, *Bowser* and *Super Smash Bros.* are trademarks and copyrights of **Nintendo**. *Kratos* / *God of War* belong to **Sony Interactive Entertainment**. *Sasuke Uchiha* / *Naruto* belong to **Masashi Kishimoto / Shueisha**. All character art belongs to its owners and to the sprite artists listed in [Credits](#credits). It is used for educational, non-commercial purposes only, and no copyright infringement is intended. See [Legal notice](#legal-notice).
 
-A 2D platform fighter for 1 to 4 players, written in **C#** with **MonoGame**. It started as a high-school final project in June 2019 and was rebuilt into a complete game. Choose from four fighters and knock your opponents off the floating platform. The more damage they have taken, the further they fly, and the last one standing wins.
+A 2D platform fighter for 1 to 4 players, written in **C#** with **MonoGame**: an object-oriented, data-driven engine with CPU opponents, xUnit tests and a CI build on Windows and Linux. Choose from four fighters and knock your opponents off the floating platform. The more damage they have taken, the further they fly, and the last one standing wins.
 
 ![Gameplay: four CPU fighters, recorded in full screen](docs/images/gameplay.gif)
 
@@ -24,7 +24,6 @@ A 2D platform fighter for 1 to 4 players, written in **C#** with **MonoGame**. I
 - [Key parts of the code](#key-parts-of-the-code)
 - [Tools](#tools)
 - [Tests](#tests)
-- [The original 2019 design](#the-original-2019-design)
 - [Credits](#credits)
 - [Legal notice](#legal-notice)
 
@@ -295,7 +294,7 @@ Small, short-lived values are structs, so creating thousands of them every frame
 | **Interfaces** | `IFocus` lets the `Camera` follow anything that has a position and a desired zoom (`MainFocus` follows all fighters). `IDisposable` on `Scene`, `Match` and `Fighter` guarantees event handlers are removed. |
 | **Polymorphism** | `Fighter` calls `Keys.Update()` without knowing if a keyboard, a gamepad or the AI answers. `Game1` calls `scene.Update() / Tick() / Draw()` on whichever screen is active, and `Scene.Music` is overridden by the select screen to switch tracks. |
 | **Encapsulation** | State is exposed read-only (`public FighterState State { get; private set; }`, `readonly` fields, `private` helpers), so only the fighter changes its own state. Internal types stay `internal`, and tests reach them through `InternalsVisibleTo`. |
-| **Composition** | A `Fighter` is built from a `Character` (data), a `BaseKeys` (input) and an `AnimationPlayer`, instead of the 2019 chain `Player : Collisions : Mario : Animations : Drawable`. A `Match` is built from a `Stage`, a `CombatSystem`, a `Camera` and `Effects`. |
+| **Composition** | A `Fighter` is built from a `Character` (data), a `BaseKeys` (input) and an `AnimationPlayer`, replacing the deep inheritance chain of the first prototype (`Player : Collisions : Mario : Animations : Drawable`). A `Match` is built from a `Stage`, a `CombatSystem`, a `Camera` and `Effects`. |
 | **Delegates and events** | `DLG_update` and `DLG_draw` (in `Core/G.cs`) are the types of the match's `event_update` / `event_draw` events. The stage, every fighter, the focus and the camera subscribe themselves; `Dispose()` unsubscribes them. |
 | **Static classes** | Stateless helpers: `Knockback` (formula), `AutoHitboxes`, `SheetBuilder`, `StageSurface`, `Palette`, `DataLoader`, `G` (constants). |
 | **Data-driven design** | Plain data classes (`CharacterDefinition`, `MoveDefinition`, `HitDefinition`, `FramesDefinition`, `StageDefinition`) are filled from JSON with `System.Text.Json`, so balancing a move or adding a character needs no code. |
@@ -393,9 +392,38 @@ The fighter then appears on the select screen automatically.
 
 GitHub Actions builds and runs the tests on Windows and Linux on every push.
 
-## The original 2019 design
+## Credits
 
-The game started as a high-school final project. These pictures and diagrams are from its project book.
+- **Code, synthesized music and sound effects, pixel font:** Liav Samiya
+- **Mario sprite sheet** (SSBB style): made by **GregarLink10**
+- **Bowser sprite sheet:** **Ragey, CheDDar-X, NF and [NU]**, made for *Super Smash Flash 2*
+- **Kratos sprite sheet:** edits by **sneckker**; *God of War: Betrayal* sprites ripped by **Grim**; head sprite by **TheJunior142**
+- **Sasuke sprite sheet:** ripped from *Naruto: Saikyou Ninja Daikesshu 4* by **NEIMAD**
+- **Stage and background:** from the project's first version
+- Built with [MonoGame](https://www.monogame.net/), [StbImageSharp](https://github.com/StbSharp/StbImageSharp) and [ImageSharp](https://github.com/SixLabors/ImageSharp) (the GIF tool only)
+
+## Legal notice
+
+This is a **fan-made, non-commercial, educational project**. It is not sold or monetized, and it is **not affiliated with or endorsed by Nintendo, Sony Interactive Entertainment, Shueisha or any other rights holder**.
+
+- **Characters:**
+  - *Mario*, *Bowser* and *Super Smash Bros.* are © and ™ **Nintendo**.
+  - *Kratos* and *God of War* are © **Sony Interactive Entertainment**.
+  - *Sasuke Uchiha* and *Naruto* are © **Masashi Kishimoto / Shueisha**.
+- **Sprites:** the sprite sheets in `src/Smash/Content/Spritesheets/` are fan-made or ripped sprites of these characters. They remain the property of their owners and of the artists listed in [Credits](#credits).
+- **Original work:** the **source code**, the synthesized audio and the pixel font are original work by Liav Samiya.
+- **Takedown requests:** if you are a rights holder and want any asset removed, please [open an issue](https://github.com/LiavSamiya/mario-smash/issues) and it will be taken down promptly.
+
+## Author
+
+**Liav Samiya**.
+
+## Project history
+
+Development started in 2019 with a first prototype. The current version is a full redesign of it: a new architecture, AI opponents, tests and CI.
+
+<details>
+<summary>Sketches and diagrams from the first prototype</summary>
 
 | Two players at the start | The camera following the players |
 | :---: | :---: |
@@ -407,8 +435,7 @@ The original sprites used hand-drawn **masks**: a copy of each sprite sheet with
 | :---: | :---: |
 | ![Up-air sprite](docs/images/original/sprite-upair.png) | ![Up-air mask](docs/images/original/mask-upair.png) |
 
-<details>
-<summary>Original UML diagrams (2019)</summary>
+**Original UML diagrams**
 
 **Inheritance: drawing and camera focus**
 
@@ -426,30 +453,5 @@ The original sprites used hand-drawn **masks**: a copy of each sprite sheet with
 
 ![Delegates diagram](docs/images/original/uml-delegates.png)
 
+
 </details>
-
-## Credits
-
-- **Code, synthesized music and sound effects, pixel font:** Liav Samiya
-- **Mario sprite sheet** (SSBB style): made by **GregarLink10**
-- **Bowser sprite sheet:** **Ragey, CheDDar-X, NF and [NU]**, made for *Super Smash Flash 2*
-- **Kratos sprite sheet:** edits by **sneckker**; *God of War: Betrayal* sprites ripped by **Grim**; head sprite by **TheJunior142**
-- **Sasuke sprite sheet:** ripped from *Naruto: Saikyou Ninja Daikesshu 4* by **NEIMAD**
-- **Stage and background:** from the original 2019 project
-- Built with [MonoGame](https://www.monogame.net/), [StbImageSharp](https://github.com/StbSharp/StbImageSharp) and [ImageSharp](https://github.com/SixLabors/ImageSharp) (the GIF tool only)
-
-## Legal notice
-
-This is a **fan-made, non-commercial, educational project**. It is not sold or monetized, and it is **not affiliated with or endorsed by Nintendo, Sony Interactive Entertainment, Shueisha or any other rights holder**.
-
-- **Characters:**
-  - *Mario*, *Bowser* and *Super Smash Bros.* are © and ™ **Nintendo**.
-  - *Kratos* and *God of War* are © **Sony Interactive Entertainment**.
-  - *Sasuke Uchiha* and *Naruto* are © **Masashi Kishimoto / Shueisha**.
-- **Sprites:** the sprite sheets in `src/Smash/Content/Spritesheets/` are fan-made or ripped sprites of these characters. They remain the property of their owners and of the artists listed in [Credits](#credits).
-- **Original work:** the **source code**, the synthesized audio and the pixel font are original work by Liav Samiya.
-- **Takedown requests:** if you are a rights holder and want any asset removed, please [open an issue](https://github.com/LiavSamiya/mario-smash/issues) and it will be taken down promptly.
-
-## Author
-
-**Liav Samiya**. Started as a high-school final project at Kfar Hayarok school in 2019.
